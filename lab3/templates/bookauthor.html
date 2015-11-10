@@ -1,0 +1,65 @@
+<head>
+<title>Book Management System</title>
+<link rel="stylesheet" type="text/css" href="/medias/models/model1.css"/>
+<style type="text/css">
+
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+a
+{
+float:left;
+width:10em;
+text-decoration:none;
+color:black;
+background-color:tansparent;
+padding:0.2em 0.6em;
+border-right:1px solid transparent;
+}
+a:hover {background-color:#ff3300}
+li {display:inline}
+</style>
+
+</head>
+
+<h2>Book Management System</h2>
+<hr/>
+<p></p>
+<ul>
+<li><a href=/list/>Back to Host</a></li>
+</ul>
+<h4>Book Information:</h4>
+<form method="post">
+<table border="1" align="center">
+  <tr><th>ISBN</th><th>Title</th><th>Publisher</th><th>PublishDate</th><th>Price</th><th>Manipulation</th></tr>
+  {% for user in Book_Au %}
+  <tr>
+  <td>{{ user.ISBN }}</td>
+  <td>{{ user.Title }}</td>
+  <td>{{ user.Publisher }}</td>
+  <td>{{ user.PublishDate }}</td>
+  <td>{{ user.Price }}</td>
+  <td><a href=/delete-id={{user.id}}/>delete</a> <a href=/update-id={{user.id}}/>update</a></td> 
+  </tr>
+{% endfor %}
+</table>
+
+<h4>Author Information:</h4>
+
+<table border="1" align="center">
+  <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+  {% for user in iterms %}
+  <tr>
+  <td>{{ user.Name }}</td>
+  <td>{{ user.Age }}</td>
+  <td>{{ user.Country }}</td>
+  </tr>
+{% endfor %}
+</table>
+</form>
+

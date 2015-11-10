@@ -1,0 +1,44 @@
+<head>
+<title>Modify</title>
+<link rel="stylesheet" type="text/css" href="/medias/models/model1.css"/>
+<style type="text/css">
+
+ul
+{
+float:left;
+width:100%;
+padding:0;
+margin:0;
+list-style-type:none;
+}
+a
+{
+float:left;
+width:10em;
+text-decoration:none;
+color:black;
+background-color:tansparent;
+padding:0.2em 0.6em;
+border-right:1px solid transparent;
+}
+a:hover {background-color:#ff3300}
+li {display:inline}
+</style>
+</head>
+<body>
+<h2>Modify Record</h2>
+<hr/>
+<ul>
+<li><a href=/list/>Back To Host</a></li>
+<ul>
+<p></p>
+<form method="post" >
+<table align="center">
+{{form.as_table}}
+</table>
+<table align="center">
+
+<br><input type="submit" value='ReturnList'/></br>
+</table>
+</form>
+</body>
